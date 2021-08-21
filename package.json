@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon local.js",
+    "deploy": "serverless deploy"
+
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-express": "^3.4.0",
+    "connect-multiparty": "^2.2.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "mysql": "2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "serverless": "^2.55.0"
+  }
+}

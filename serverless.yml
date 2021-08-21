@@ -1,0 +1,23 @@
+service: tickets-api
+
+provider:
+ name: aws
+ runtime: nodejs12.x
+ memorySize: 128
+ timeout: 10
+ stage: api
+ region: us-east-1
+
+functions:
+ api:
+   handler: lambda.universal
+   events:
+     - http: ANY {proxy+}
+     - http: ANY /
+
+
+Add deploy script to package.json:
+"scripts": {
+ "start": "nodemon local.js",
+ "deploy": "serverless deploy"
+}
